@@ -1,0 +1,419 @@
+@import url(fonts/TTLakes/stylesheet.css);
+html{
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'TT Lakes', 'sans-serif', 'serif';
+    font-size: 16px;
+    background-color: #F2F2F2;
+}
+.page {
+    margin: 0 auto;
+    max-width: 1120px;
+    background-color: #F8F8F8;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 18px 16px 18px 16px;
+    border-bottom: 1px solid #D9FFF5;
+}
+.header__header-left, 
+.header__header-right {
+    display: flex;
+    align-items: center;
+}
+.logo{
+    transition: 0.1s all;
+}
+.logo:hover {   
+    filter: drop-shadow(0 1px 1px white)
+            drop-shadow(0 2px 0px #0e0d0d);
+}
+.button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    transition: 0.3s all;
+}
+.button:hover{
+    transform: scale(1.05);
+}
+.button--profile, .button--chat,.button--call, .main__button-label {
+    display: none;
+}
+.header__header-left .divider {
+    display: none;
+}
+.button--call {
+    background-image: url(/Img/img_nav/callcall.svg);
+}
+.button--burger{
+    margin-right: 16px;
+    background-image: url(/Img/img_nav/burgermenu_burger.svg);
+}
+.button--chat{
+    background-image: url(/Img/img_nav/chat.svg);
+}
+.button--profile{
+    background-image: url(/Img/img_nav/profile.svg);
+}
+.button--repair{
+    margin-right: 16px;
+    background-image: url(/Img/img_nav/repair.svg);
+}
+.button--checkstatus{
+    background-image: url(/Img/img_nav/checkstatus.svg);
+}
+.divider{
+    margin-right: 20px;
+    border: 1px solid #EAEAEA;
+    height: 32px;
+    border-radius: 1px;
+}
+   /* main */
+   .main__title {
+       margin: 24px 16px 0 16px;
+       font-size: 1.75em;
+       line-height: 40px;
+       position: relative;
+   }
+   .main__title::before{
+       content: '';
+       position: absolute;
+       border: 2px solid #41F6D7;
+       background-color:#41F6D7 ;
+       border-radius:0 100px 100px 0;
+       height: 40px;
+       left:-16px;
+   }
+   .main__nav {
+       margin-left: 16px;
+   }
+   .nav__list {
+       overflow: scroll;
+       display: flex;
+       align-items: center;
+       margin-top: 24px;
+       padding-bottom: 24px;
+   }
+   .nav__list::-webkit-scrollbar { width: 0; }
+   .nav__list::after{
+    content: '';
+    width: 24px;
+    height: 50px;
+    right: 0px;
+    position: absolute;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    filter:blur(4px)
+   }
+   .nav__item {
+       list-style: none;
+   }
+   .nav__link {
+      text-decoration: none;
+      color:#7E7E82;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      white-space: nowrap;
+      margin-right: 25px;
+  }
+    .nav__item--active .nav__link {
+    margin-right: 0;
+  }
+    .nav__item--active {
+    padding: 6px 9px 6px 14px;
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    margin-right: 19px;
+  }
+    .about-company__title, .about-company__second-paragraph {
+    display: none;
+}
+    .about-company {
+        margin-top: 0px;
+    }
+    .about-company__first-paragraph{
+        font-size: 15px;
+        margin: 0 16px 0 16px;
+        line-height: 18px;
+    }
+    .about-company__image {
+        width: 320px;
+        height: 230px;
+        margin-right: 25px;
+        border-radius: 7px;
+    }
+    .read-more-button {
+        position: relative;
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-family: 'TT Lakes', 'sans-serif', 'serif';
+    }
+    .read-more-button::before {
+        content: '';
+        background-image: url(/Img/img_about-company/icon.svg);
+        position: absolute;
+        width: 8px;
+        height: 11px;
+        left:-17px;
+        top:5px;
+    }
+    .about-company__read-more-button {
+        margin:16px 0;
+        margin-left: 40px;
+    }
+@media  (min-width: 380px) {
+    .button--profile {
+        display: block;
+    }
+    .divider {
+        margin-left: 20px;
+    }
+}
+@media  (min-width: 450px) {
+    .button--chat {
+        display: block;
+        margin-right: 16px;
+    }
+}
+@media  (min-width: 490px) {
+    .button--call {
+        display: block;
+        margin-right: 16px;
+    }  
+}
+@media (min-width:750px) {
+    .header__header-left .divider {
+        display:block;
+    }
+    .button--burger {
+        margin-right:0;
+     }
+     .header__header-left .divider {
+        display:block;
+        margin-left:16px;
+        margin-right:16px;
+    }
+}
+@media (min-width:768px) {
+    .header__header-left .divider {
+        display:block;
+        margin:0 16px;
+    }
+    .button--burger {
+        margin-right: 0;
+    }
+    .main__title {
+        margin: 24px 0 32px 24px ;
+        font-size: 1.75em;
+        line-height: 40px;
+        position: relative;
+    }
+    .main__title::before{
+        content: '';
+        position: absolute;
+        border: 2px solid #41F6D7;
+        border-radius:0 100px 100px 0;
+        height: 40px;
+        left:-24px;
+    }
+    .main__nav {
+        padding-left: 24px;
+        margin-left: 0;
+    }
+    .about-company__first-paragraph {
+        margin-left: 0px;
+    }
+    .about-company__second-paragraph {
+        display: block;
+        font-size: 15px;
+        margin: 0 16px 0 16px;
+        line-height: 18px;
+        margin-left: 0px;
+    }
+    .about-company__hidden-paragraph {
+        display: none;
+    }
+    .about-company {
+        display: flex;
+    }
+    .about-company__text {
+        margin-right: 23px;
+        margin-left: 34px;
+    }
+    .about-company__image {
+        width: 360px;
+        height: 260px;
+        margin-right: 25px;
+        transform: translateY(-30px);
+    }
+    .about-company__second-paragraph {
+        margin-top: 25px;
+    }
+}
+@media (min-width:1120px) {
+    .header {
+        display: none;
+    }
+    
+}
+@media (min-width:1120px) {
+    .header {
+        display: none;
+    }
+    .main__header,.main__button-label {
+        display: block;
+    }
+    .main__title{
+        align-items: flex-start;
+        margin: 0;
+    }
+    .main__title::before{
+        left:-32px;
+    }
+    .main__header,.main__button-group, .main__button-label {
+        display: flex;
+    } 
+    .main__header {
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 42px 32px 0px 32px;
+    }
+    .main__button-group{
+        align-items: flex-start;
+    }
+    .main__button-label {
+        align-items: center;
+    }
+    .main__button-label .button--repair, .main__button-label .button--checkstatus{
+        margin-left: 9px;
+    }
+    .button--repair {
+        margin-right: 32px;
+    }
+    .main__nav {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .nav__list {
+        flex-wrap: wrap;
+        margin: 8px 32px 0px 32px;
+        padding: 0px;
+    }
+    .nav__item--active .nav__link {
+        margin-left: 22px;
+        margin-right: 21px;
+    }
+    .nav__item {
+        margin-bottom: 22px;
+    }
+    .nav__item--active {
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+    .nav__link {
+        margin-right: 0;
+        margin-left:22px ;
+    }
+     .about-company__hidden-paragraph {
+        display: inline;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .about-company__text {
+        font-size: 15px;
+        margin-right: 36px;
+        line-height: 20px;
+    }
+    .about-company__first-paragraph {
+        line-height: 20px;
+        margin-right: 0px;
+    }
+    .about-company__second-paragraph {
+        margin-right: 0px;
+    }
+    .about-company__image {
+        transform: translateY(-58px);
+        width: 531px;
+        height: 384px;
+        margin-right: 28px;
+    }
+    .nav__list {
+        padding-bottom: 0px;
+    }
+    .nav__item {
+        margin-bottom: 13px;
+    }
+}
+@media (min-width:420px) and (max-width:766px){
+    .about-company__image {
+        transform: translateX(30%);
+    }
+}
+@media (min-width:500px) and (max-width:600px){
+    .about-company__image {
+        transform: translateX(35%);
+    }
+}
+@media (min-width:600px) and (max-width:680px){
+    .about-company__image {
+        transform: translateX(40%);
+    }
+}
+@media (min-width:680px) and (max-width:767px){
+    .about-company__image {
+        transform: translateX(50%);
+    }
+}
+@media (min-width:800px) and (max-width:1120px){
+    .header {
+        display: none;
+    }
+    .main__header,.main__button-group, .main__button-label {
+        display: flex;
+    } 
+   
+    .main__header,.main__button-label {
+        display: flex;
+    }
+    .main__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main__header {
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 42px 32px 0px 32px;
+    }
+    .main__button-group{
+        align-items: flex-start;
+    }
+    
+    .main__title{
+        align-items: flex-start;
+        margin: 0;
+    }
+    .main__button-label {
+        align-items: center;
+    }
+    .main__button-label .button--repair, .main__button-label .button--checkstatus{
+        margin-left: 9px;
+    }
+
+}
+
+
