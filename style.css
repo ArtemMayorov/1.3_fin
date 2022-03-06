@@ -55,24 +55,24 @@ body{
     display: none;
 }
 .button--call {
-    background-image: url(/Img/img_nav/callcall.svg);
+    background-image: url(/Img/img-nav/callcall.svg);
 }
 .button--burger{
     margin-right: 16px;
-    background-image: url(/Img/img_nav/burgermenu_burger.svg);
+    background-image: url(/Img/img-nav/burgermenu_burger.svg);
 }
 .button--chat{
-    background-image: url(/Img/img_nav/chat.svg);
+    background-image: url(/Img/img-nav/chat.svg);
 }
 .button--profile{
-    background-image: url(/Img/img_nav/profile.svg);
+    background-image: url(/Img/img-nav/profile.svg);
 }
 .button--repair{
     margin-right: 16px;
-    background-image: url(/Img/img_nav/repair.svg);
+    background-image: url(/Img/img-nav/repair.svg);
 }
 .button--checkstatus{
-    background-image: url(/Img/img_nav/checkstatus.svg);
+    background-image: url(/Img/img-nav/checkstatus.svg);
 }
 .divider{
     margin-right: 20px;
@@ -152,7 +152,7 @@ body{
         width: 320px;
         height: 230px;
         margin-right: 25px;
-        border-radius: 7px;
+        border-radius: none;
     }
     .read-more-button {
         position: relative;
@@ -163,7 +163,7 @@ body{
     }
     .read-more-button::before {
         content: '';
-        background-image: url(/Img/img_about-company/icon.svg);
+        background-image: url(/Img/img-about-company/icon.svg);
         position: absolute;
         width: 8px;
         height: 11px;
@@ -257,6 +257,7 @@ body{
         width: 360px;
         height: 260px;
         margin-right: 25px;
+        border-radius: 7px;
         transform: translateY(-30px);
     }
     .about-company__second-paragraph {
