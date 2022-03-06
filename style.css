@@ -34,8 +34,7 @@ body{
     transition: 0.1s all;
 }
 .logo:hover {   
-    filter: drop-shadow(0 1px 1px white)
-            drop-shadow(0 2px 0px #0e0d0d);
+    filter: drop-shadow(0 2px 1px  #0e0d0d);
 }
 .button {
     cursor: pointer;
@@ -81,6 +80,9 @@ body{
     border-radius: 1px;
 }
    /* main */
+   .main {
+       padding-bottom: 40px;
+   }
    .main__title {
        margin: 24px 16px 0 16px;
        font-size: 1.75em;
@@ -150,7 +152,7 @@ body{
     }
     .about-company__image {
         width: 320px;
-        height: 230px;
+        height: 176px;
         margin-right: 25px;
         border-radius: none;
     }
@@ -255,10 +257,10 @@ body{
     }
     .about-company__image {
         width: 360px;
-        height: 260px;
+        height: 208px;
         margin-right: 25px;
         border-radius: 7px;
-        transform: translateY(-30px);
+        /* transform: translateY(-30px); */
     }
     .about-company__second-paragraph {
         margin-top: 25px;
@@ -348,9 +350,9 @@ body{
         margin-right: 0px;
     }
     .about-company__image {
-        transform: translateY(-58px);
+        transform: translateY(-10px);
         width: 531px;
-        height: 384px;
+        height: 307px;
         margin-right: 28px;
     }
     .nav__list {
