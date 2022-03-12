@@ -4,7 +4,7 @@ const slider = document.querySelector('.swiper')
 let swiper;
 function mobileSlider() {
   
-  if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+  if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
     slider.dataset.mobile = 'true'
     swiper =  new Swiper('.swiper', {
       // Optional parameters
@@ -14,6 +14,7 @@ function mobileSlider() {
       spaceBetween: 200,
       // If we need pagination
       pagination: {
+        clickable:true,
         el: '.swiper-pagination',
         dynamicBullets: false,
         dynamicMainBullets: 9,
@@ -33,7 +34,7 @@ function mobileSlider() {
       breakpoints: {
         // when window width is >= 640
         640: {
-          slidesPerView: 8,
+          slidesPerView: 2.5,
           spaceBetween: 40
         }
       }
@@ -42,7 +43,7 @@ function mobileSlider() {
   }
   
 
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth > 768 && slider.dataset.mobile == 'true') {
     
     if(slider.classList.contains('swiper-initialized')) {
       // swiper.appendSlide([
@@ -52,7 +53,6 @@ function mobileSlider() {
       swiper.destroy()
     }
     slider.dataset.mobile = 'false'
-   
   } 
 }
   window.addEventListener('resize', ()=> {
