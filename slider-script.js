@@ -4,7 +4,7 @@ const slider = document.querySelector('.swiper')
 let swiper;
 function mobileSlider() {
   
-  if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
+  if (window.innerWidth < 767 && slider.dataset.mobile == 'false') {
     slider.dataset.mobile = 'true'
     swiper =  new Swiper('.swiper', {
       // Optional parameters
@@ -35,7 +35,11 @@ function mobileSlider() {
         // when window width is >= 640
         640: {
           slidesPerView: 2.5,
-          spaceBetween: 40
+          spaceBetween: 40,
+        },
+        700: {
+          slidesPerView: 2.5,
+          spaceBetween: 40,
         }
       }
     });
@@ -62,7 +66,7 @@ function mobileSlider() {
   window.addEventListener('load', ()=> {
     mobileSlider()
   })
-
+console.log(window.innerWidth)
 
 // hidden
 const openPartners = document.querySelector('.swiper-wrapper')
